@@ -41,7 +41,7 @@
 		<tycho-version>1.0.0</tycho-version>
 		<eclipse-site>http://download.eclipse.org/releases/neon/</eclipse-site>
 		<orbit-site>http://download.eclipse.org/tools/orbit/R-builds/R20170307180635/repository</orbit-site>
-		<m2e-update-site>http://download.eclipse.org/technology/m2e/releases/</m2e-update-site>
+		<m2e-update-site>http://download.eclipse.org/technology/m2e/releases/latest</m2e-update-site>
         <android.builder.version>2.3.3</android.builder.version>
         <android.tools.version>25.3.3</android.tools.version>
 	</properties>
@@ -68,7 +68,17 @@
 			<layout>p2</layout>
 		</repository>
 		<repository>
-			<!-- For org.jfree:chart_swt -->
+			<id>aliyun</id>
+			<url>https://maven.aliyun.com/repository/public</url>
+			<releases>
+			    <enabled>true</enabled>
+			</releases>
+			<snapshots>
+			    <enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<!--  For org.jfree:chart_swt -->
 			<id>homer-core</id>
 			<name>homer-core</name>
 			<url>https://nexus.arcsmed.at/content/repositories/homer.core/</url>
@@ -79,6 +89,16 @@
 	</repositories>
 
 	<pluginRepositories>
+		<pluginRepository>
+			<id>aliyun-plugin</id>
+			<url>https://maven.aliyun.com/repository/public</url>
+			<releases>
+			    <enabled>true</enabled>
+			</releases>
+			<snapshots>
+			    <enabled>false</enabled>
+			</snapshots>
+			</pluginRepository>
 		<pluginRepository>
 			<id>cbi-releases</id>
 			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>

@@ -263,13 +263,13 @@ public class RenderSecurityManager extends SecurityManager {
     public void checkPackageAccess(String pkg) {
     }
 
-    @Override
-    public void checkMemberAccess(Class<?> clazz, int which) {
-        if (which == Member.DECLARED && isRelevant() &&
-                "com.android.ide.common.rendering.RenderSecurityManager".equals(clazz.getName())) {
-            throw RenderSecurityException.create("Reflection", clazz.getName());
-        }
-    }
+//    @Override
+//    public void checkMemberAccess(Class<?> clazz, int which) {
+//        if (which == Member.DECLARED && isRelevant() &&
+//                "com.android.ide.common.rendering.RenderSecurityManager".equals(clazz.getName())) {
+//            throw RenderSecurityException.create("Reflection", clazz.getName());
+//        }
+//    }
 
     @Override
     public void checkPropertyAccess(String property) {
@@ -519,12 +519,12 @@ public class RenderSecurityManager extends SecurityManager {
         }
     }
 
-    @Override
-    public void checkAwtEventQueueAccess() {
-        if (isRelevant()) {
-            throw RenderSecurityException.create("Event", null);
-        }
-    }
+//    @Override
+//    public void checkAwtEventQueueAccess() {
+//        if (isRelevant()) {
+//            throw RenderSecurityException.create("Event", null);
+//        }
+//    }
 
     // Prevent writes
 
@@ -555,20 +555,20 @@ public class RenderSecurityManager extends SecurityManager {
         }
     }
 
-    @Override
-    public void checkSystemClipboardAccess() {
-        if (isRelevant()) {
-            throw RenderSecurityException.create("Clipboard", null);
-        }
-    }
+//    @Override
+//    public void checkSystemClipboardAccess() {
+//        if (isRelevant()) {
+//            throw RenderSecurityException.create("Clipboard", null);
+//        }
+//    }
 
-    @Override
-    public boolean checkTopLevelWindow(Object context) {
-        if (isRelevant()) {
-            throw RenderSecurityException.create("Window", null);
-        }
-        return false;
-    }
+//    @Override
+//    public boolean checkTopLevelWindow(Object context) {
+//        if (isRelevant()) {
+//            throw RenderSecurityException.create("Window", null);
+//        }
+//        return false;
+//    }
 
     @Override
     public void checkAccess(Thread thread) {

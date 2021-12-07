@@ -117,7 +117,8 @@ public final class ExportHelper {
             IFileWrapper manifestFile = new IFileWrapper((IFile) manifestResource);
             boolean debugMode = AndroidManifest.getDebuggable(manifestFile);
 
-            AndroidPrintStream fakeStream = new AndroidPrintStream(null, null, new OutputStream() {
+            @SuppressWarnings("resource")
+			AndroidPrintStream fakeStream = new AndroidPrintStream(null, null, new OutputStream() {
                 @Override
                 public void write(int b) throws IOException {
                     // do nothing

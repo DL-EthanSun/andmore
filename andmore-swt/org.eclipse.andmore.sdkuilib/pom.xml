@@ -28,6 +28,7 @@
     </dependencies>
 	<build>
 	<!-- plain surefire tests without tycho -->
+	<sourceDirectory>src/main/java</sourceDirectory>
 	<testSourceDirectory>${basedir}/test-src</testSourceDirectory>
 		<plugins>
 			<plugin>
